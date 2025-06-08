@@ -10,11 +10,12 @@
  #include "freertos/task.h"
  #include "esp_err.h"
  #include "esp_log.h"
- #include "driver/twai.h"
+#include "driver/twai.h"
+#include "driver/gpio.h"
 #include <sys/unistd.h>
  
- #define TWAI_TX_GPIO GPIO_NUM_32
- #define TWAI_RX_GPIO GPIO_NUM_33
+#define TWAI_TX_GPIO  ((gpio_num_t)CONFIG_CAN_TX_GPIO_NUM)
+#define TWAI_RX_GPIO  ((gpio_num_t)CONFIG_CAN_RX_GPIO_NUM)
  #define MSG_ID       0x555
  #define EXAMPLE_TAG  "TWAI SENDER"
  

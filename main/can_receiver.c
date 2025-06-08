@@ -11,9 +11,9 @@
  #include "driver/twai.h"
  #include "driver/gpio.h"
  
- #define TWAI_TX_GPIO GPIO_NUM_32
- #define TWAI_RX_GPIO GPIO_NUM_33
- #define LED_GPIO_NUM  GPIO_NUM_25
+#define TWAI_TX_GPIO  ((gpio_num_t)CONFIG_CAN_TX_GPIO_NUM)
+#define TWAI_RX_GPIO  ((gpio_num_t)CONFIG_CAN_RX_GPIO_NUM)
+#define LED_GPIO_NUM  ((gpio_num_t)CONFIG_CAN_LED_GPIO_NUM)
  #define MSG_ID        0x555
  #define EXAMPLE_TAG   "TWAI RECEIVER"
  
